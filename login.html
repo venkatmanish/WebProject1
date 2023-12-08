@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      body {
+        background-color: #333; /* Dark background color */
+        color: #fff; /* Light text color */
+        height: 100vh; /* Full height of the viewport */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+
+      .login-box {
+        background-color: #444; /* Slightly lighter box color */
+        padding: 20px;
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow for depth */
+      }
+
+      .login-box input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .login-box button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745; /* Green color for the button */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-box">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <input type="text" placeholder="Username" name="username" />
+          <input type="password" placeholder="Password" name="password" />
+          <!-- Inside the login form -->
+          <!-- Inside the login form -->
+          <button type="button" id="loginButton">Login</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      /* Additional CSS for the new font and buttons */
+      body {
+        background: url("https://cdn.dribbble.com/users/4055494/screenshots/15215756/lottie-000_1_1.gif")
+          center center fixed; /* Add your image URL here */
+        background-size: cover;
+        color: #fff;
+        height: 100vh;
+        display: flex;
+        align-items: flex-start; /* Align text to the top */
+        justify-content: flex-start; /* Align text to the left */
+        margin: 0;
+      }
+
+      .content-container {
+        text-align: center; /* Center align the content */
+        margin-top: 60px;
+        margin-left: 90px;
+      }
+
+      .special-font {
+        font-family: "Arial", sans-serif; /* Replace with your desired font */
+        font-size: 48px; /* Double the original font size */
+        font-weight: bold;
+        color: rgb(20, 18, 17);
+      }
+
+      .btn-container {
+        position: fixed; /* Fixed position to keep it in place */
+        top: 180px; /* Adjust top position as needed */
+        left: 90px; /* Adjust left position as needed */
+        z-index: 1; /* Ensure buttons are above the text */
+      }
+
+      .btn-container a {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: #fff;
+        padding: 10px 20px;
+        background-color: #28a745;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-container a:hover {
+        background-color: #218838;
+      }
+    </style>
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="container content-container">
+      <h1 id="dynamicText" class="special-font"></h1>
+    </div>
+    <div class="btn-container">
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/register.js"></script>
+    <script>
+      // Dynamic text display
+      var dynamicText = document.getElementById("dynamicText");
+      var text = "Hey...Developer!!!";
+      var index = 0;
+
+      function displayText() {
+        dynamicText.textContent += text[index];
+        index++;
+        if (index < text.length) {
+          setTimeout(displayText, 100); // Adjust the delay (in milliseconds) as needed
+        } else {
+          setTimeout(function () {
+            dynamicText.textContent = ""; // Clear the text after 2 seconds
+            index = 0;
+            displayText(); // Restart the animation
+          }, 2000);
+        }
+      }
+
+      displayText(); // Start the animation
+    </script>
+  </body>
+</html>

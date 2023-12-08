@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Include your CSS and Bootstrap files here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      body {
+        background-color: #333;
+        color: #fff;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+
+      .register-box {
+        background-color: #444;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .register-box input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .register-box button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="register-box">
+        <h2>Register</h2>
+        <form id="registerForm">
+          <!-- Update the form inputs as per your requirements -->
+          <input type="text" placeholder="Username" name="username" />
+          <input type="password" placeholder="Password" name="password" />
+          <input type="text" placeholder="Age" name="age" />
+          <input type="text" placeholder="Date of Birth" name="dob" />
+          <input type="text" placeholder="Contact" name="contact" />
+          <!-- Change the button ID to avoid conflicts -->
+          <button type="button" id="registerButton" onclick="register()">
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Include your JavaScript files here -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/register.js"></script>
+  </body>
+</html>
